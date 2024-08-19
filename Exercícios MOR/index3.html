@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Simples</title>
+</head>
+<body>
+    <p id="counter">0</p>
+    <button onclick="increment()">Incrementar</button>
+    <button onclick="decrement()">Decrementar</button>
+
+    <script>
+        let count = 0;
+
+        function increment() {
+            count++;
+            document.getElementById('counter').innerHTML = count;
+        }
+
+        function decrement() {
+            count--;
+            document.getElementById('counter').innerHTML = count;
+        }
+    </script>
+</body>
+</html>

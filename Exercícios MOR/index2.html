@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar/Ocultar Elementos</title>
+</head>
+<body>
+    <p id="textParagraph">Este é um parágrafo de exemplo.</p>
+    <button onclick="hideParagraph()">Esconder</button>
+    <button onclick="showParagraph()">Mostrar</button>
+
+    <script>
+        function hideParagraph() {
+            document.getElementById('textParagraph').style.display = 'none';
+        }
+
+        function showParagraph() {
+            document.getElementById('textParagraph').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

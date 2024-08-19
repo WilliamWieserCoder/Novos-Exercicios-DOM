@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar e Remover Elementos</title>
+</head>
+<body>
+    <input type="text" id="itemInput" placeholder="Digite um item">
+    <button onclick="addItem()">Adicionar</button>
+    <button onclick="removeItem()">Remover</button>
+    <ul id="itemList"></ul>
+
+    <script>
+        function addItem() {
+            const input = document.getElementById('itemInput');
+            const itemValue = input.value.trim();
+            if (itemValue) {
+                const ul = document.getElementById('itemList');
+                const li = document.createElement('li');
+                li.textContent = itemValue;
+                ul.appendChild(li);
+                input.value = ''; // Limpa o campo de input
+            }
+        }
+
+        function removeItem() {
+            const ul = document.getElementById('itemList');
+            if (ul.hasChildNodes()) {
+                ul.removeChild(ul.lastChild);
+            }
+        }
+    </script>
+</body>
+</html>
